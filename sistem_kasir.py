@@ -17,12 +17,12 @@ while True:     # while loop ini akan berjalan terus menerus sampai ada kesalaha
     try:
         menu = int(input("Silahkan Masukkan Pilihan Anda(1/2/3/4/5/6): "))      # hanya menerima input berupa integer
         if menu == 1:       # menu no.1 menampilkan method add_item()
-            nama_item = str(input("Masukkan nama item: "))
+            nama_item = str(input("Masukkan nama item: ").title())
             jumlah = int(input("Masukkan jumlah item: "))
             harga = int(input("Masukkan harga item: "))
             print(id.add_item(nama_item=nama_item, jumlah_item=jumlah, harga_per_item=harga))
         elif menu == 2:     # menu no.2 menampilkan method update_item_name(), update_item_qty(), update_item_price()
-            pilihan_update = int(input("1. Update nama barang\n2. Update Jumlah Barang\n3. Update harga\nPilih Menu Update yang diinginkan(1/2/3): "))
+            pilihan_update = int(input("1. Update nama barang\n2. Update jumlah barang\n3. Update harga\nPilih Menu Update yang diinginkan(1/2/3): "))
             """ Terdapat 3 pilihan update yaitu nama, jumlah dan harga.
             
             untuk menyelaraskan inputan maka digunakan .title() pada branching di bawah 
@@ -34,12 +34,12 @@ while True:     # while loop ini akan berjalan terus menerus sampai ada kesalaha
                 update_nama_barang = id.update_item_nama(nama_item=nama_lama, update_nama_item=barang_baru)
                 print(update_nama_barang)
             elif pilihan_update == 2:
-                nama_lama = str(input("Masukkan jumlah barang yang mau diupdate: ").title())
+                nama_lama = str(input("Masukkan nama barang yang mau diupdate: ").title())
                 jumlah_barang_baru = int(input("Masukkan jumlah terbaru: "))
                 update_jumlah_barang = id.update_item_jumlah(nama_item=nama_lama, update_jumlah_item=jumlah_barang_baru)
                 print(update_jumlah_barang)
             elif pilihan_update == 3:
-                nama_lama = str(input("Masukkan harga barang yang mau diupdate: ").title())
+                nama_lama = str(input("Masukkan nama barang yang mau diupdate: ").title())
                 harga_barang_baru = int(input("Masukkan harga terbaru: "))
                 update_harga_barang = id.update_item_harga(nama_item=nama_lama, update_harga_item=harga_barang_baru)
                 print(update_harga_barang)

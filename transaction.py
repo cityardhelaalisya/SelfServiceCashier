@@ -55,9 +55,9 @@ class Transaction:
        
         for key, value in self.data_keranjang.items():      # membuat for loop dan branching untuk memfilter data yang bernilai 0 atau ""
             if key != "" and value[0] > 0 and value[1] > 0:
-                print("Pemesanan Benar")
+                return "Pemesanan sudah benar"
             else:
-                print("Terdapat kesalahan dipesanan!")
+                return "Terdapat kesalahan dipesanan !"
     
     
     def total_price(self):
